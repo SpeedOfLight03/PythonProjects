@@ -14,7 +14,7 @@ def chat(query):
 
     client = OpenAI(api_key=apikey)
 
-    chatStr += f"Harry: {query}\n Jarvis: "
+    chatStr += f"Arnab: {query}\n Jarvis: "
     try:
         response = client.completions.create(
             model="text-davinci-003",
