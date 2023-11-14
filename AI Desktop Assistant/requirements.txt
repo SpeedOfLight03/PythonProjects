@@ -2,3 +2,5 @@ speechrecognition
 wikipedia
 openai
 pyaudio
+webbrowser
+subprocess
