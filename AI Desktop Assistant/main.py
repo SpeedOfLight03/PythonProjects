@@ -35,7 +35,7 @@ def chat(query):
 def ai(query):
     client = OpenAI(api_key=apikey)
     text = (
-        f"OpenAI response for query: {query}\n------------------------------------n\n"
+        f"OpenAI response for query: {query}\n-------------------------------------\n"
     )
 
     try:
@@ -59,7 +59,7 @@ def ai(query):
     if not os.path.exists("Openai"):
         os.mkdir("Openai")
 
-    file_name = "_".join(str(query).lower().split("intelligence")[1:].strip().split())
+    file_name = "_".join(str(query).lower().split("intelligence")[1].strip().split())
     with open(f"Openai/{file_name}.txt", "w") as f:
         f.write(text)
 
