@@ -28,8 +28,11 @@ def chat(query):
     except Exception as e:
         print(e)
 
-    say(response["choices"][0]["text"])
-    chatStr += f"{response['choices'][0]['text']}\n"
+    try:
+        say(response["choices"][0]["text"])
+        chatStr += f"{response['choices'][0]['text']}\n"
+    except Exception as e:
+        print("Some Error Occured, SORRY!!")
 
 
 def ai(query):
